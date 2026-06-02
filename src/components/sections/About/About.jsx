@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { personalInfo } from '../../../data/portfolioData'
 import styles from './About.module.css'
 
@@ -9,6 +10,7 @@ const services = [
 ]
 
 export default function About() {
+  const [photoError, setPhotoError] = useState(false)
   return (
     <section className={styles.about}>
       <div className={styles.header}>
@@ -24,8 +26,11 @@ export default function About() {
           <div className={styles.profileBanner} />
           <div className={styles.profileCardBody}>
             <div className={styles.profileAvatar}>
-              <img src="/profile.jpg" alt="Ali Haider" onError={(e) => { e.target.style.display = 'none' }} />
-              
+              {!photoError ? (
+                <img src="/profile.jpg" alt="Ali Haider" onError={() => setPhotoError(true)} />
+              ) : (
+                <span>AH</span>
+              )}
             </div>
             <div className={styles.profileName}>{personalInfo.name}</div>
             <div className={styles.profileRole}>{personalInfo.title}</div>

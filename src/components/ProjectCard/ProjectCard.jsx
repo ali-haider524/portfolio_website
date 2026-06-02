@@ -10,7 +10,7 @@ const catStyle = {
   'IoT':              { color: '#16a34a', bg: '#f0fdf4', placeholderBg: 'linear-gradient(135deg,#f0fdf4,#bbf7d0)', icon: '📡' },
 }
 
-const placeholderImg = (id) => `https://picsum.photos/seed/project${id}/600/300`
+const placeholderImg = (id) => null // use local colored placeholders instead of external picsum
 
 // GitHub SVG icon
 // Code icon
@@ -35,22 +35,28 @@ export default function ProjectCard({ project }) {
 
   return (
     <article className={styles.card}>
-      {/* Image */}
+      {/* Image — shows colored placeholder with icon. Replace with real screenshot by adding
+           project.image = "/projects/my-project.jpg" in portfolioData.js */}
       <div className={styles.imgWrap}>
-        <img
-          src={placeholderImg(project.id)}
-          alt={project.title}
-          loading="lazy"
-          onError={(e) => {
-            e.target.style.display = 'none'
-            e.target.nextSibling.style.display = 'flex'
-          }}
-        />
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+            onError={(e) => {
+              e.target.style.display = 'none'
+              e.target.nextSibling.style.display = 'flex'
+            }}
+          />
+        ) : null}
         <div
           className={styles.imgPlaceholder}
-          style={{ background: style.placeholderBg, display: 'none' }}
+          style={{ background: style.placeholderBg, display: project.image ? 'none' : 'flex' }}
         >
-          <span>{style.icon}</span>
+          <span style={{ fontSize: '2.5rem' }}>{style.icon}</span>
+          <span style={{ fontSize: '0.72rem', color: '#64748b', fontWeight: 600, marginTop: '0.25rem' }}>
+            {project.category}
+          </span>
         </div>
         <div className={styles.imgOverlay} />
         {project.featured && (

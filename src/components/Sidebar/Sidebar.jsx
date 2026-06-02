@@ -1,22 +1,26 @@
+import { useState } from 'react'
 import { personalInfo, navItems } from '../../data/portfolioData'
 import styles from './Sidebar.module.css'
 
 export default function Sidebar({ activeSection, setActiveSection, isOpen }) {
+  const [photoError, setPhotoError] = useState(false)
+
   return (
     <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
 
       <div className={styles.profile}>
-        {/* Mini gradient banner */}
         <div className={styles.profileBanner} />
-        {/* Profile photo ring — replace /profile.jpg with your actual photo */}
         <div className={styles.avatarRing}>
           <div className={styles.avatarInner}>
-            <img
-              src="/profile.jpg"
-              alt="Ali Haider"
-              onError={(e) => { e.target.style.display = 'none' }}
-            />
-            
+            {!photoError ? (
+              <img
+                src="/profile.jpg"
+                alt="Ali Haider"
+                onError={() => setPhotoError(true)}
+              />
+            ) : (
+              <span>AH</span>
+            )}
           </div>
           <div className={styles.uploadHint}>📷</div>
         </div>

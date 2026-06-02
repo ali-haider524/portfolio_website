@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from './Home.module.css'
 
 const quickInfo = [
@@ -7,6 +8,8 @@ const quickInfo = [
 ]
 
 export default function Home({ setActiveSection }) {
+  const [photoError, setPhotoError] = useState(false)
+
   return (
     <section className={styles.home}>
 
@@ -16,14 +19,16 @@ export default function Home({ setActiveSection }) {
 
         <div className={styles.heroBody}>
           <div className={styles.profilePhotoWrap}>
-            {/* Profile photo — put your photo at public/profile.jpg */}
             <div className={styles.profilePhoto}>
-              <img
-                src="/profile.jpg"
-                alt="Ali Haider"
-                onError={(e) => { e.target.style.display = 'none' }}
-              />
-            
+              {!photoError ? (
+                <img
+                  src="/profile.jpg"
+                  alt="Ali Haider"
+                  onError={() => setPhotoError(true)}
+                />
+              ) : (
+                <span>AH</span>
+              )}
             </div>
             <span className={styles.heroBadge}>
               <span className={styles.heroBadgeDot} />
@@ -65,8 +70,8 @@ export default function Home({ setActiveSection }) {
       <div className={styles.statsRow}>
         {[
           { num: '10+', label: 'Projects Built' },
-          { num: '2',  label: 'Companies' },
-          { num: '2',  label: 'Certifications' },
+          { num: '2',   label: 'Companies' },
+          { num: '2',   label: 'Certifications' },
           { num: '2026', label: 'CS Graduate' },
         ].map((s) => (
           <div key={s.label} className={styles.statCard}>
