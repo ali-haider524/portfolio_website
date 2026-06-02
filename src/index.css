@@ -1,0 +1,121 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #eff6ff;
+  --accent: #0d9488;
+  --accent-soft: #ccfbf1;
+  --yellow: #f59e0b;
+  --yellow-soft: #fef3c7;
+
+  /* Background — soft blue-grey tint like the reference */
+  --bg: #e8edf5;
+  --bg-white: #ffffff;
+  --bg-card: #ffffff;
+  --bg-subtle: #f0f3f9;
+
+  /* Sidebar */
+  --sidebar-bg: #0f172a;
+  --sidebar-width: 240px;
+
+  /* Text */
+  --text-dark: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  /* Borders */
+  --border: #dde3ef;
+  --border-md: #c8d0e0;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow: 0 4px 16px rgba(0,0,0,0.09);
+  --shadow-md: 0 8px 28px rgba(0,0,0,0.11);
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 6px;
+  --transition: 0.2s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c8d0e0; border-radius: 10px; }
+
+/* Shared section header */
+.secTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border: 1.5px solid #93c5fd;
+  padding: 3px 11px;
+  border-radius: 20px;
+  margin-bottom: 0.55rem;
+}
+
+.secHeading {
+  /* Slightly smaller, less heavy — more refined */
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.6px;
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.secSub {
+  /* Bigger and more readable than before */
+  font-size: 0.92rem;
+  color: #64748b;
+  margin-bottom: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ── Botpress chatbot bubble visibility fix ── */
+/* Wraps the bubble in a white ring so it contrasts against the tinted background */
+#bp-web-widget-container,
+[id^='bp-web-widget'] {
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.22));
+}
+
+/* Ensure Botpress stays above everything except modals */
+#bp-web-widget-container {
+  z-index: 400 !important;
+}
+
+/* Mobile: make the bot button more visible with a white halo */
+@media (max-width: 768px) {
+  #bp-web-widget-container {
+    filter: drop-shadow(0 0 0 6px #ffffff) drop-shadow(0 6px 20px rgba(0,0,0,0.35)) !important;
+  }
+}

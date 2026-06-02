@@ -1,0 +1,303 @@
+.home {
+  padding: 0 0 2rem;
+}
+
+/* ── Hero card ── */
+.heroCard {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.heroBanner {
+  height: 155px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 45%, #134e4a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.heroBody {
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* Profile photo */
+.profilePhotoWrap {
+  margin-top: -70px;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profilePhoto {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  /* Dark border so it separates from both the dark banner and white card */
+  border: 4px solid #1e3a5f;
+  box-shadow: 0 0 0 3px #ffffff, 0 6px 24px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2563eb, #0d9488);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.profilePhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #059669;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 2px;
+}
+
+.heroBadgeDot {
+  width: 6px; height: 6px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.heroName {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.heroNameAccent { color: var(--primary); }
+
+.heroTitle {
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.65rem;
+}
+
+.heroDesc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  max-width: 540px;
+  margin-bottom: 1rem;
+}
+
+/* Tech pills */
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.pill {
+  padding: 3px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-body);
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.pill:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.83rem;
+  font-weight: 700;
+  transition: all var(--transition);
+  box-shadow: 0 3px 12px rgba(99,102,241,0.3);
+}
+
+.btnPrimary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(99,102,241,0.4);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--bg-white);
+  color: var(--text-dark);
+  border-radius: var(--radius-sm);
+  font-size: 0.83rem;
+  font-weight: 700;
+  border: 1px solid var(--border-md);
+  transition: all var(--transition);
+}
+
+.btnSecondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* ── Stats row ── */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.statCard {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 0.75rem;
+  text-align: center;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition);
+}
+
+.statCard:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.statNum {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.8px;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.statLabel {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── Quick info cards ── */
+.quickRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.quickCard {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition);
+}
+
+.quickCard:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.quickIcon {
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.quickLabel {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  margin-bottom: 1px;
+}
+
+.quickValue {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+@media (max-width: 700px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .quickRow { grid-template-columns: 1fr 1fr; }
+  .heroBanner { height: 120px; }
+  .profilePhoto { width: 108px; height: 108px; font-size: 1.7rem; }
+  .profilePhotoWrap { margin-top: -54px; }
+}
+
+@media (max-width: 480px) {
+  .heroBody { padding: 0 1rem 1.25rem; }
+  .quickRow { grid-template-columns: 1fr; }
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .heroBanner { height: 105px; }
+  .profilePhoto { width: 96px; height: 96px; font-size: 1.5rem; }
+  .profilePhotoWrap { margin-top: -48px; }
+}

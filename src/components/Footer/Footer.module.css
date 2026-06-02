@@ -1,0 +1,67 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 1.75rem 1.25rem;
+  margin-top: 1rem;
+  /* Extra right padding so Botpress bubble never covers the footer links */
+  padding-right: 6rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.sep {
+  color: var(--text-light);
+  font-size: 0.75rem;
+}
+
+.role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.right {
+  display: flex;
+  gap: 1rem;
+  /* Ensure links don't slide under the fixed chatbot bubble */
+  margin-right: 0;
+}
+
+.link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.copy {
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 600px) {
+  .inner { flex-direction: column; align-items: flex-start; }
+  .footer { padding-right: 1.75rem; }
+}
