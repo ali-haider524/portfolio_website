@@ -67,6 +67,7 @@ export const projects = [
     featured: true,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/hospital.jpg",
   },
   {
     id: 2,
@@ -78,6 +79,7 @@ export const projects = [
     featured: true,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/construction.jpg",
   },
   {
     id: 3,
@@ -89,6 +91,7 @@ export const projects = [
     featured: false,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/solar.jpg",
   },
   {
     id: 4,
@@ -100,6 +103,7 @@ export const projects = [
     featured: true,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/skincare.jpg",
   },
   {
     id: 5,
@@ -111,6 +115,7 @@ export const projects = [
     featured: false,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/portfolio-html.jpg",
   },
   {
     id: 6,
@@ -122,6 +127,7 @@ export const projects = [
     featured: true,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/portfolio-react.jpg",
   },
   {
     id: 7,
@@ -133,6 +139,7 @@ export const projects = [
     featured: false,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/quotes-app.jpg",
   },
   {
     id: 8,
@@ -144,6 +151,7 @@ export const projects = [
     featured: false,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/resume-tailor.jpg",
   },
   {
     id: 9,
@@ -155,6 +163,7 @@ export const projects = [
     featured: false,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/calculator.jpg",
   },
   {
     id: 10,
@@ -166,6 +175,7 @@ export const projects = [
     featured: true,
     github: "https://github.com/ali-haider524",
     live: null,
+    image: "/projects/chatbot.jpg",
   },
   {
     id: 11,
@@ -177,6 +187,7 @@ export const projects = [
     featured: false,
     github: null,
     live: null,
+    image: null,
     wip: true,
   },
 ];
@@ -190,7 +201,6 @@ export const certificates = [
     description:
       "Completed Google's professional cybersecurity course covering network security, threat analysis, and security best practices.",
     color: "#4285F4",
-    // Place your certificate image at: public/certificates/cybersecurity.jpg
     image: "/certificates/cybersecurity.jpg",
   },
   {
@@ -201,7 +211,6 @@ export const certificates = [
     description:
       "Completed Google's AI Prompt Engineering course covering effective prompting techniques, LLM usage, and AI workflow design.",
     color: "#0d9488",
-    // Place your certificate image at: public/certificates/ai-prompt.jpg
     image: "/certificates/ai-prompt.jpg",
   },
   {
@@ -212,10 +221,8 @@ export const certificates = [
     description:
       "Graduated with a Bachelor of Science in Computer Science, covering software engineering, databases, algorithms, and AI fundamentals.",
     color: "#2563eb",
-    // Place your certificate image at: public/certificates/degree.jpg
     image: "/certificates/degree.jpg",
   },
-  
 ];
 
 export const navItems = [
