@@ -4,21 +4,17 @@ const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage first
-    const saved = localStorage.getItem('theme')
-    if (saved) return saved
-
-    // Check system preference
-    if (typeof window !== 'undefined') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    }
+    // Check localStorage first — if user has toggled before, respect that
+    const saved = localStorage.getItem('portfolio-theme')
+    if (saved === 'dark' || saved === 'light') return saved
+    // Always default to light — never follow browser/OS preference
     return 'light'
   })
 
   useEffect(() => {
     // Apply theme to HTML element
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
+    localStorage.setItem('portfolio-theme', theme)
   }, [theme])
 
   const toggleTheme = () => {
