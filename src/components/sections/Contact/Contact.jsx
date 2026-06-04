@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { personalInfo } from '../../../data/portfolioData'
+import { analyticsService } from '../../../services/analyticsService'
 import styles from './Contact.module.css'
 
 const contacts = [
@@ -19,6 +20,10 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setStatus('sending')
+    
+    // Track contact form submission
+    analyticsService.trackContactSubmission()
+    
     const subject = encodeURIComponent(form.subject || 'Portfolio Contact')
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`

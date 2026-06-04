@@ -1,3 +1,4 @@
+import { analyticsService } from '../../services/analyticsService'
 import styles from './ProjectCard.module.css'
 
 const catStyle = {
@@ -32,6 +33,10 @@ const LiveIcon = () => (
 
 export default function ProjectCard({ project }) {
   const style = catStyle[project.category] || catStyle['Web App']
+
+  const handleProjectClick = () => {
+    analyticsService.trackProjectClick(project.id, project.title)
+  }
 
   return (
     <article className={styles.card}>
@@ -94,6 +99,7 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className={styles.linkBtnCode}
               title="View source code"
+              onClick={handleProjectClick}
             >
               <CodeIcon />
               View Code
@@ -106,6 +112,7 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className={styles.linkBtnLive}
               title="Open live project"
+              onClick={handleProjectClick}
             >
               <LiveIcon />
               Live Preview

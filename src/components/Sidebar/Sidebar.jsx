@@ -1,9 +1,21 @@
 import { useState } from 'react'
 import { personalInfo, navItems } from '../../data/portfolioData'
+import { useTheme } from '../../context/ThemeContext'
 import styles from './Sidebar.module.css'
 
 export default function Sidebar({ activeSection, setActiveSection, isOpen }) {
   const [photoError, setPhotoError] = useState(false)
+  
+  let theme = 'light'
+  let toggleTheme = () => {}
+  
+  try {
+    const themeContext = useTheme()
+    theme = themeContext.theme
+    toggleTheme = themeContext.toggleTheme
+  } catch (err) {
+    console.warn('Theme context not available:', err)
+  }
 
   return (
     <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
@@ -50,6 +62,27 @@ export default function Sidebar({ activeSection, setActiveSection, isOpen }) {
       </nav>
 
       <div className={styles.bottom}>
+        <div className={styles.toolsRow}>
+          <div className={styles.themeToggle}>
+            <button
+              onClick={toggleTheme}
+              className={styles.themeBtn}
+              aria-label="Toggle theme"
+              title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            >
+              {theme === 'light' ? '🌙' : '☀️'}
+            </button>
+          </div>
+
+          <button
+            onClick={() => setActiveSection('analytics')}
+            className={`${styles.adminBtn} ${activeSection === 'analytics' ? styles.adminBtnActive : ''}`}
+            title="View analytics dashboard"
+          >
+            📊
+          </button>
+        </div>
+
         <p className={styles.socialsLabel}>Connect</p>
         <div className={styles.socials}>
           <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className={styles.socialBtn} title="GitHub">

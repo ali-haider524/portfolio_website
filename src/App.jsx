@@ -7,8 +7,11 @@ import Experience from './components/sections/Experience/Experience'
 import Projects from './components/sections/Projects/Projects'
 import Certificates from './components/sections/Certificates/Certificates'
 import Contact from './components/sections/Contact/Contact'
+import AnalyticsDashboard from './components/AnalyticsDashboard/AnalyticsDashboard'
 import Footer from './components/Footer/Footer'
 import ScrollTop from './components/ScrollTop/ScrollTop'
+import { analyticsService } from './services/analyticsService'
+import { PersonSchema, PortfolioSchema, OrganizationSchema } from './services/seoSchema'
 import styles from './App.module.css'
 
 function App() {
@@ -36,6 +39,13 @@ function App() {
     if (el) el.scrollTo({ top: 0, behavior: 'smooth' })
   }, [activeSection])
 
+  // Track page views
+  useEffect(() => {
+    if (activeSection !== 'analytics') {
+      analyticsService.trackPageView(activeSection)
+    }
+  }, [activeSection])
+
   const handleNav = (id) => {
     setActiveSection(id)
     setSidebarOpen(false)
@@ -48,6 +58,7 @@ function App() {
       projects:     'Projects | Ali Haider',
       certificates: 'Certificates | Ali Haider',
       contact:      'Contact | Ali Haider',
+      analytics:    'Analytics | Ali Haider',
     }
     document.title = titles[id] || 'Ali Haider | Portfolio'
   }
@@ -61,12 +72,18 @@ function App() {
       case 'projects':     return <Projects />
       case 'certificates': return <Certificates />
       case 'contact':      return <Contact />
+      case 'analytics':    return <AnalyticsDashboard />
       default:             return <Home setActiveSection={handleNav} />
     }
   }
 
   return (
     <div className={styles.layout}>
+      {/* SEO Structured Data */}
+      <PersonSchema />
+      <PortfolioSchema />
+      <OrganizationSchema />
+
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div className={styles.overlay} onClick={() => setSidebarOpen(false)} />
@@ -98,7 +115,7 @@ function App() {
         <div className={styles.content} key={activeSection}>
           {renderSection()}
         </div>
-        <Footer />
+        {activeSection !== 'analytics' && <Footer />}
       </main>
 
       <ScrollTop />

@@ -1,0 +1,23 @@
+# Robots.txt for Ali Haider Portfolio
+
+# Allow all bots
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ali-haider.dev/sitemap.xml
+
+# Disallow admin/private areas (none in this SPA)
+# Disallow: /admin
+
+# Crawl delay to prevent overloading server
+Crawl-delay: 0
+
+# Specific crawler rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

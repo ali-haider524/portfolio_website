@@ -67,7 +67,7 @@ export const projects = [
     featured: true,
     github: "https://github.com/ali-haider524",
     live: null,
-    image: "/projects/hospital.jpg",
+    image: "/projects/hospitalmanagement.png",
   },
   {
     id: 2,

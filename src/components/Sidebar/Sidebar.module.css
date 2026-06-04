@@ -15,7 +15,8 @@
 .profile {
   border-bottom: 1px solid rgba(255,255,255,0.08);
   text-align: center;
-  padding-bottom: 1.1rem;
+  padding-bottom: 0.7rem;
+  padding-top: 0.3rem;
 }
 
 .profileBanner {
@@ -91,7 +92,7 @@
   font-size: 1rem;
   font-weight: 700;
   color: #f8fafc;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.05rem;
   padding: 0 1rem;
   line-height: 1.3;
   letter-spacing: -0.2px;
@@ -135,14 +136,14 @@
 /* ── Nav ── */
 .nav {
   flex: 1;
-  padding: 0.85rem 0.85rem 0.5rem;
+  padding: 0.5rem 0.85rem 0.3rem;
 }
 
 .navList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 /* Section label above nav items */
@@ -153,7 +154,7 @@
   letter-spacing: 0.12em;
   color: #475569;
   padding: 0 0.9rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .navBtn {
@@ -161,7 +162,7 @@
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  padding: 0.58rem 0.9rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 8px;
   /* Inactive: clearly readable, not washed out */
   color: #94a3b8;
@@ -195,11 +196,90 @@
 
 /* ── Bottom ── */
 .bottom {
-  padding: 0.85rem 1rem 1.4rem;
+  padding: 0.5rem 0.85rem 0.8rem;
   border-top: 1px solid rgba(255,255,255,0.08);
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.4rem;
+}
+
+/* ── Tools Section (Theme + Analytics) ── */
+.toolsRow {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.15rem 0 0.1rem 0;
+  padding: 0.2rem 0;
+}
+
+.themeToggle {
+  flex: 0 0 auto;
+}
+
+.themeBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  color: #94a3b8;
+}
+
+.themeBtn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #cbd5e1;
+}
+
+.themeBtn:active {
+  transform: scale(0.95);
+}
+
+.adminBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0;
+  border-radius: 6px;
+  color: #94a3b8;
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-align: center;
+  letter-spacing: 0.005em;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.adminBtn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #cbd5e1;
+}
+
+.adminBtn:active {
+  transform: scale(0.95);
+}
+
+.adminBtn.adminBtnActive {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: #93c5fd;
 }
 
 /* Social label */
@@ -209,12 +289,13 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #475569;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.05rem;
+  margin-top: 0.2rem;
 }
 
 .socials {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .socialBtn {
@@ -240,7 +321,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  padding: 0.58rem;
+  padding: 0.45rem;
+  margin-top: 0.2rem;
   background: rgba(37,99,235,0.15);
   border: 1px solid rgba(59,130,246,0.3);
   border-radius: 8px;

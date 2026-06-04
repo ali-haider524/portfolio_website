@@ -231,11 +231,28 @@
 }
 
 @media (max-width: 860px) {
-  .grid { grid-template-columns: 1fr; gap: 1rem; }
-  .profileCard { max-width: 280px; }
+  .grid { 
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+    justify-items: center;
+  }
+  .profileCard { 
+    max-width: 280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
   .servicesGrid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 480px) {
   .servicesGrid { grid-template-columns: 1fr; }
+  .profileCard {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
