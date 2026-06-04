@@ -1,0 +1,81 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.75rem;
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.breadcrumb {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* Theme toggle button */
+.themeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--bg);
+  border: 1.5px solid var(--border-md);
+  border-radius: 20px;
+  color: var(--text-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.themeBtn:hover {
+  background: var(--bg-white);
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(37,99,235,0.15);
+}
+
+.themeBtnIcon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.themeBtnLabel {
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+/* Dark mode styles when [data-theme="dark"] is on <html> */
+:global([data-theme="dark"]) .topbar {
+  background: #1e293b;
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+:global([data-theme="dark"]) .themeBtn {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+  color: #cbd5e1;
+}
+
+:global([data-theme="dark"]) .themeBtn:hover {
+  background: rgba(99,102,241,0.2);
+  border-color: #6366f1;
+  color: #a5b4fc;
+}
+
+:global([data-theme="dark"]) .breadcrumb {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0.65rem 1rem 0.65rem 4rem; /* leave room for hamburger */
+  }
+}

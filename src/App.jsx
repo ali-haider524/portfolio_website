@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Sidebar from './components/Sidebar/Sidebar'
+import TopBar from './components/TopBar/TopBar'
 import Home from './components/sections/Home/Home'
 import About from './components/sections/About/About'
 import Skills from './components/sections/Skills/Skills'
@@ -112,6 +113,7 @@ function App() {
 
       {/* Main scrollable area */}
       <main className={styles.main} data-main-content>
+        <TopBar activeSection={activeSection} />
         <div className={styles.content} key={activeSection}>
           {renderSection()}
         </div>

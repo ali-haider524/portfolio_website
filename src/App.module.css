@@ -23,7 +23,7 @@
 .content {
   max-width: 960px;
   margin: 0 auto;
-  padding: 1.75rem 1.75rem 3rem;
+  padding: 1.25rem 1.75rem 3rem;
   animation: fadeUp 0.28s ease;
 }
 
@@ -61,6 +61,6 @@
 
 @media (max-width: 768px) {
   .main { margin-left: 0; }
-  .content { padding: 4.5rem 1rem 2.5rem; }
+  .content { padding: 1.25rem 1rem 2.5rem; }
   .hamburger { display: flex; }
 }
