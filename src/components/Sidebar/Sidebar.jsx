@@ -68,9 +68,9 @@ export default function Sidebar({ activeSection, setActiveSection, isOpen }) {
               onClick={toggleTheme}
               className={styles.themeBtn}
               aria-label="Toggle theme"
-              title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              {theme === 'dark' ? '🌙' : '☀️'}
             </button>
           </div>
 
