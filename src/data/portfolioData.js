@@ -5,7 +5,7 @@ export const personalInfo = {
   email: "aleesalar524@gmail.com",
   phone: "03218724280",
   github: "https://github.com/ali-haider524",
-  linkedin: "https://www.linkedin.com/in/ali-haider-92b111411/",
+  linkedin: "https://www.linkedin.com/in/ali-haider-524salar/",
   location: "Pakistan",
   about: `I'm Ali Haider, an AI Web Developer, Automation Specialist & AI Solutions Builder with expertise in custom web development using PHP, Node.js, and React. I build interactive apps and management systems tailored for businesses.
 
@@ -197,7 +197,7 @@ export const certificates = [
     id: 1,
     title: "Google Cybersecurity Certificate",
     issuer: "Google / Coursera",
-    year: "2024",
+    year: "2026",
     description:
       "Completed Google's professional cybersecurity course covering network security, threat analysis, and security best practices.",
     color: "#4285F4",
@@ -207,7 +207,7 @@ export const certificates = [
     id: 2,
     title: "AI Prompt Engineering",
     issuer: "Google / Coursera",
-    year: "2024",
+    year: "2026",
     description:
       "Completed Google's AI Prompt Engineering course covering effective prompting techniques, LLM usage, and AI workflow design.",
     color: "#0d9488",
