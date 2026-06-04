@@ -203,14 +203,35 @@
   gap: 0.4rem;
 }
 
-/* ── Tools Section (Theme + Analytics) ── */
-.toolsRow {
+/* Analytics button */
+.analyticsBtn {
   display: flex;
-  gap: 0.4rem;
   align-items: center;
-  justify-content: flex-start;
-  margin: 0.15rem 0 0.1rem 0;
-  padding: 0.2rem 0;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.52rem 0.85rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-align: left;
+}
+
+.analyticsBtn:hover {
+  background: rgba(37,99,235,0.18);
+  border-color: rgba(59,130,246,0.35);
+  color: #93c5fd;
+}
+
+.analyticsBtnActive {
+  background: rgba(37,99,235,0.22);
+  border-color: rgba(59,130,246,0.4);
+  color: #bfdbfe;
 }
 
 .themeToggle {

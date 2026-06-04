@@ -50,6 +50,16 @@ export default function Sidebar({ activeSection, setActiveSection, isOpen }) {
       </nav>
 
       <div className={styles.bottom}>
+        {/* Analytics button */}
+        <button
+          onClick={() => setActiveSection('analytics')}
+          className={`${styles.analyticsBtn} ${activeSection === 'analytics' ? styles.analyticsBtnActive : ''}`}
+          title="View analytics dashboard"
+        >
+          <span>📊</span>
+          Analytics
+        </button>
+
         <p className={styles.socialsLabel}>Connect</p>
         <div className={styles.socials}>
           <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className={styles.socialBtn} title="GitHub">
