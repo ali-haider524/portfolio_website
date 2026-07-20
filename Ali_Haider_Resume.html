@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Haider — Resume</title>
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Page ── */
+    body {
+      font-family: 'Calibri', 'Arial', sans-serif;
+      font-size: 10.5pt;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.45;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 32px 40px 36px;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #1e3a5f;
+    }
+
+    .name {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .title-line {
+      font-size: 10.5pt;
+      font-weight: 600;
+      color: #2563eb;
+      letter-spacing: 0.5px;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+    }
+
+    .contact-line {
+      font-size: 9.5pt;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .contact-line a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .sep {
+      color: #94a3b8;
+      margin: 0 6px;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 13px;
+    }
+
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1e3a5f;
+      border-bottom: 1.5px solid #1e3a5f;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 10pt;
+      color: #334155;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 20px;
+    }
+
+    .skill-row {
+      font-size: 9.5pt;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* ── Experience ── */
+    .exp-block {
+      margin-bottom: 10px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1px;
+    }
+
+    .exp-role {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .exp-period {
+      font-size: 9.5pt;
+      color: #64748b;
+      white-space: nowrap;
+      font-style: italic;
+    }
+
+    .exp-company {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 4px;
+    }
+
+    .exp-tech {
+      font-size: 9pt;
+      color: #475569;
+      font-style: italic;
+      margin-bottom: 3px;
+    }
+
+    ul.bullets {
+      margin-left: 16px;
+      margin-top: 3px;
+    }
+
+    ul.bullets li {
+      font-size: 9.5pt;
+      color: #334155;
+      line-height: 1.55;
+      margin-bottom: 2px;
+      list-style-type: disc;
+    }
+
+    /* ── Projects ── */
+    .project-block {
+      margin-bottom: 8px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .project-name {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .project-type {
+      font-size: 9pt;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    .project-tech {
+      font-size: 9pt;
+      color: #475569;
+      font-style: italic;
+      margin-bottom: 2px;
+    }
+
+    .project-desc {
+      font-size: 9.5pt;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    /* ── Education ── */
+    .edu-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .edu-degree {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-school {
+      font-size: 9.5pt;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .edu-detail {
+      font-size: 9pt;
+      color: #475569;
+      margin-top: 2px;
+    }
+
+    .edu-period {
+      font-size: 9.5pt;
+      color: #64748b;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    /* ── Certs ── */
+    .cert-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .cert-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .cert-issuer {
+      font-size: 9pt;
+      color: #475569;
+    }
+
+    .cert-year {
+      font-size: 9pt;
+      color: #64748b;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff; }
+      .page { padding: 18px 28px 20px; max-width: 100%; }
+      a { color: #2563eb !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ════ HEADER ════ -->
+  <div class="header">
+    <div class="name">Ali Haider</div>
+    <div class="title-line">AI Web Developer &nbsp;|&nbsp; Automation Specialist &nbsp;|&nbsp; AI Solutions Builder</div>
+    <div class="contact-line">
+      📍 Pakistan
+      <span class="sep">|</span>
+      📧 <a href="mailto:aleesalar524@gmail.com">aleesalar524@gmail.com</a>
+      <span class="sep">|</span>
+      📱 +92 321 8724280
+      <br />
+      🔗 <a href="https://www.linkedin.com/in/ali-haider-524salar/" target="_blank">linkedin.com/in/ali-haider-524salar</a>
+      <span class="sep">|</span>
+      🐙 <a href="https://github.com/ali-haider524" target="_blank">github.com/ali-haider524</a>
+      <span class="sep">|</span>
+      🌐 <a href="https://portfolio-website-taupe-seven-38.vercel.app/" target="_blank">portfolio-website-taupe-seven-38.vercel.app</a>
+    </div>
+  </div>
+
+  <!-- ════ PROFESSIONAL SUMMARY ════ -->
+  <div class="section summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Results-driven AI Web Developer and Automation Specialist with hands-on experience building custom web
+      applications, management systems, e-commerce platforms, and AI-powered chatbot solutions. Proficient in
+      full-stack development using PHP, Node.js, and React, with demonstrated expertise in deploying AI agents
+      and workflow automations using Botpress and n8n. Graduated with a BS in Computer Science (2026) and
+      certified in Google Cybersecurity and AI Prompt Engineering. Proven ability to deliver clean UI/UX with
+      robust backend solutions on time and within scope.
+    </p>
+  </div>
+
+  <!-- ════ TECHNICAL SKILLS ════ -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Frontend:</span> React.js, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, Alpine.js</div>
+      <div class="skill-row"><span class="skill-label">Backend:</span> PHP, Laravel, Node.js, MySQL, REST APIs, WordPress</div>
+      <div class="skill-row"><span class="skill-label">AI &amp; Automation:</span> Botpress, n8n, AI Chatbots, AI Agents, API Integration</div>
+      <div class="skill-row"><span class="skill-label">Tools:</span> Git, GitHub, Vite, Flutter, Firebase, Python (Tkinter), ESP8266, IoT</div>
+    </div>
+  </div>
+
+  <!-- ════ PROFESSIONAL EXPERIENCE ════ -->
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <div class="exp-role">Web Developer — Internship</div>
+        <div class="exp-period">Summer 2024</div>
+      </div>
+      <div class="exp-company">WeConnect Software House &nbsp;·&nbsp; On-site, Pakistan</div>
+      <div class="exp-tech">Technologies: PHP, WordPress, MySQL, Botpress, AI Agents, HTML/CSS, JavaScript</div>
+      <ul class="bullets">
+        <li>Built and deployed multiple client websites using PHP, MySQL, and WordPress, delivering clean UI/UX and scalable backend solutions</li>
+        <li>Integrated AI chatbots into business websites using Botpress, enabling automated customer support and lead generation</li>
+        <li>Developed and configured custom AI agents for FAQ automation, user onboarding, and data collection workflows</li>
+        <li>Collaborated with development team on full-stack projects from requirements gathering through production deployment</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <div class="exp-role">Node.js Developer — Remote Internship</div>
+        <div class="exp-period">Remote</div>
+      </div>
+      <div class="exp-company">Nexium Software House &nbsp;·&nbsp; Remote</div>
+      <div class="exp-tech">Technologies: Node.js, REST APIs, JavaScript, Backend Development</div>
+      <ul class="bullets">
+        <li>Developed backend services and RESTful APIs using Node.js for multiple client projects</li>
+        <li>Designed API endpoints and integrated database logic for scalable server-side applications</li>
+        <li>Collaborated asynchronously with a distributed team, consistently delivering backend features on schedule</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ════ PROJECTS ════ -->
+  <div class="section">
+    <div class="section-title">Key Projects</div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">Quick Legal Corporation — CMS Website</span>
+        <span class="project-type">Business Website · Laravel</span>
+      </div>
+      <div class="project-tech">Laravel · Filament Admin Panel · MySQL · Blade · Tailwind</div>
+      <div class="project-desc">Professional CMS-based website for legal, tax, corporate registration, and business advisory services. Complete admin panel for managing services, blogs, case studies, team, testimonials, SEO content, and website settings. Features dynamic service pages, global search, secure contact forms, WhatsApp integration, and Hostinger-ready deployment.</div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">SolveGrid — Online Calculation Tools</span>
+        <span class="project-type">Web Application · Live</span>
+      </div>
+      <div class="project-tech">JavaScript · Responsive UI · SEO · Google Analytics</div>
+      <div class="project-desc">Browser-based platform for online math, engineering, research, and everyday calculation tools. Includes graphing calculator, scientific calculator, matrix solver, equation solver, statistics, unit converter, circuit analysis, and financial calculators. Clean UI with mobile-friendly layout and SEO optimization. Live: solvegrid.online</div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">Hospital / Clinic Management System</span>
+        <span class="project-type">Web Application</span>
+      </div>
+      <div class="project-tech">PHP · Tailwind CSS · Alpine.js · MySQL</div>
+      <div class="project-desc">Complete hospital management system with patient records, appointment scheduling, billing, and staff management. Interactive UI using Alpine.js for real-time feedback without page reloads.</div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">IoT Automated Switch System</span>
+        <span class="project-type">IoT · Hardware + Mobile App</span>
+      </div>
+      <div class="project-tech">ESP8266 · Flutter · Firebase · Circuit Design</div>
+      <div class="project-desc">IoT-based automated switch system using ESP8266 microcontroller with custom circuit design. Features a Flutter mobile app with Firebase integration for remote control, real-time monitoring, and device management.</div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">Construction Company Website</span>
+        <span class="project-type">Business Website</span>
+      </div>
+      <div class="project-tech">PHP · MySQL · Payment Integration · Product Management</div>
+      <div class="project-desc">Full-featured business website with product management, sales tracking, and online payment integrations. Includes an admin portal for managing inventory and client orders.</div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">Skincare E-Commerce Store</span>
+        <span class="project-type">E-Commerce Platform</span>
+      </div>
+      <div class="project-tech">PHP · MySQL · E-Commerce · Botpress Chatbot</div>
+      <div class="project-desc">End-to-end e-commerce platform with product catalog, cart, checkout, and order management. Integrated AI chatbot for real-time customer support, reducing manual inquiries.</div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">AI Portfolio Chatbot</span>
+        <span class="project-type">AI / Automation</span>
+      </div>
+      <div class="project-tech">Botpress · JavaScript · API Integration</div>
+      <div class="project-desc">Custom AI chatbot integrated into personal portfolio. Responds to visitor queries about skills, projects, and experience in real time. Also deployed on client websites for customer support.</div>
+    </div>
+
+    <div class="project-block">
+      <div class="project-header">
+        <span class="project-name">Portfolio Website (React + Vite)</span>
+        <span class="project-type">React Application</span>
+      </div>
+      <div class="project-tech">React.js · Vite · CSS Modules · Vercel</div>
+      <div class="project-desc">Responsive professional portfolio with sidebar navigation, filterable project cards, certificate viewer, dark/light theme toggle, and analytics dashboard. Deployed on Vercel.</div>
+    </div>
+  </div>
+
+  <!-- ════ EDUCATION ════ -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-block">
+      <div>
+        <div class="edu-degree">Bachelor of Science in Computer Science</div>
+        <div class="edu-school">University, Pakistan</div>
+        <div class="edu-detail">Relevant Coursework: Software Engineering · Databases · Algorithms · AI Fundamentals · Computer Networks</div>
+      </div>
+      <div class="edu-period">2022 – 2026</div>
+    </div>
+  </div>
+
+  <!-- ════ CERTIFICATIONS ════ -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+
+    <div class="cert-block">
+      <div>
+        <div class="cert-title">Google Cybersecurity Certificate</div>
+        <div class="cert-issuer">Google / Coursera &nbsp;·&nbsp; Network security, threat analysis, security operations, incident response</div>
+      </div>
+      <div class="cert-year">2026</div>
+    </div>
+
+    <div class="cert-block">
+      <div>
+        <div class="cert-title">AI Prompt Engineering</div>
+        <div class="cert-issuer">Google / Coursera &nbsp;·&nbsp; Effective prompting, LLM applications, AI workflow design</div>
+      </div>
+      <div class="cert-year">2026</div>
+    </div>
+  </div>
+
+  <!-- ════ ADDITIONAL ════ -->
+  <div class="section">
+    <div class="section-title">Additional Information</div>
+    <ul class="bullets">
+      <li>Completed <strong>IoT Automated Switch System</strong> with ESP8266, Flutter mobile app, and Firebase real-time integration</li>
+      <li>Built and deployed <strong>Laravel CMS website</strong> with Filament admin panel for professional legal services business</li>
+      <li>Developed <strong>SolveGrid</strong> calculation tools platform, indexed on Google with growing organic search traffic</li>
+      <li>Delivered solutions across multiple business domains: healthcare, construction, legal services, e-commerce, and IoT automation</li>
+      <li>Available for full-time roles, freelance projects, and remote collaborations</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

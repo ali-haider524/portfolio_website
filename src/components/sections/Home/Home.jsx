@@ -69,7 +69,7 @@ export default function Home({ setActiveSection }) {
       {/* ── Stats ── */}
       <div className={styles.statsRow}>
         {[
-          { num: '10+', label: 'Projects Built' },
+          { num: '13+', label: 'Projects Built' },
           { num: '2',   label: 'Companies' },
           { num: '2',   label: 'Certifications' },
           { num: '2026', label: 'CS Graduate' },

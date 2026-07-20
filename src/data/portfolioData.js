@@ -21,7 +21,7 @@ export const skills = [
   },
   {
     category: "Backend",
-    items: ["PHP", "Node.js", "MySQL", "REST APIs", "WordPress"],
+    items: ["PHP", "Laravel", "Node.js", "MySQL", "REST APIs", "WordPress"],
   },
   {
     category: "AI & Automation",
@@ -29,7 +29,7 @@ export const skills = [
   },
   {
     category: "Tools & Others",
-    items: ["Git & GitHub", "Vite", "Python (Tkinter)", "IoT (Basic)", "Cybersecurity (Basic)"],
+    items: ["Git & GitHub", "Vite", "Flutter", "Firebase", "Python (Tkinter)", "ESP8266", "IoT", "Cybersecurity (Basic)"],
   },
 ];
 
@@ -59,6 +59,30 @@ export const experience = [
 export const projects = [
   {
     id: 1,
+    title: "Quick Legal Corporation - CMS Website",
+    category: "Business Website",
+    description:
+      "Professional CMS-based website for legal, tax, corporate registration, and business advisory services. Built with Laravel, Filament Admin Panel, and MySQL. Features complete admin control for services, blogs, case studies, team, testimonials, SEO content, and website settings.",
+    tags: ["Laravel", "Filament", "MySQL", "Blade", "Tailwind", "CMS"],
+    featured: true,
+    github: "https://github.com/ali-haider524",
+    live: null,
+    image: "/projects/quicklegal.jpg",
+  },
+  {
+    id: 2,
+    title: "SolveGrid - Online Calculation Tools",
+    category: "Web App",
+    description:
+      "Browser-based platform for online math, engineering, research, and everyday calculation tools. Includes graphing calculator, scientific calculator, matrix solver, equation solver, statistics, unit converter, circuit analysis, and financial calculators. Built with clean UI, mobile-friendly layout, and SEO optimization.",
+    tags: ["JavaScript", "Responsive UI", "SEO", "Google Analytics", "Educational Tools"],
+    featured: true,
+    github: "https://github.com/ali-haider524",
+    live: "https://solvegrid.online",
+    image: "/projects/solvegrid.jpg",
+  },
+  {
+    id: 3,
     title: "Hospital / Clinic Management System",
     category: "Web App",
     description:
@@ -70,7 +94,7 @@ export const projects = [
     image: "/projects/hospitalmanagement.png",
   },
   {
-    id: 2,
+    id: 4,
     title: "Construction Company Website",
     category: "Business Website",
     description:
@@ -82,7 +106,7 @@ export const projects = [
     image: "/projects/construction.jpg",
   },
   {
-    id: 3,
+    id: 5,
     title: "Solar Company Website",
     category: "Business Website",
     description:
@@ -94,7 +118,7 @@ export const projects = [
     image: "/projects/solar.jpg",
   },
   {
-    id: 4,
+    id: 6,
     title: "Skincare E-Commerce Store",
     category: "E-Commerce",
     description:
@@ -106,7 +130,7 @@ export const projects = [
     image: "/projects/skincare.jpg",
   },
   {
-    id: 5,
+    id: 7,
     title: "Portfolio Website (HTML/CSS/JS)",
     category: "Portfolio",
     description:
@@ -118,7 +142,7 @@ export const projects = [
     image: "/projects/portfolio-html.jpg",
   },
   {
-    id: 6,
+    id: 8,
     title: "Portfolio Website (React + Vite)",
     category: "Portfolio",
     description:
@@ -130,7 +154,7 @@ export const projects = [
     image: "/projects/portfolio-react.jpg",
   },
   {
-    id: 7,
+    id: 9,
     title: "Quotes Generator Desktop App",
     category: "Desktop App",
     description:
@@ -142,7 +166,7 @@ export const projects = [
     image: "/projects/quotes-app.jpg",
   },
   {
-    id: 8,
+    id: 10,
     title: "Resume Tailor App",
     category: "Desktop App",
     description:
@@ -154,7 +178,7 @@ export const projects = [
     image: "/projects/resume-tailor.jpg",
   },
   {
-    id: 9,
+    id: 11,
     title: "Developer Calculator (Python)",
     category: "Desktop App",
     description:
@@ -166,7 +190,7 @@ export const projects = [
     image: "/projects/calculator.jpg",
   },
   {
-    id: 10,
+    id: 12,
     title: "AI Portfolio Chatbot",
     category: "AI Chatbot",
     description:
@@ -178,17 +202,16 @@ export const projects = [
     image: "/projects/chatbot.jpg",
   },
   {
-    id: 11,
-    title: "IoT-Based Smart System",
+    id: 13,
+    title: "IoT Automated Switch System",
     category: "IoT",
     description:
-      "Currently working on an IoT-based project that combines hardware sensors with a web dashboard. Involves real-time data monitoring, device control, and cloud connectivity.",
-    tags: ["IoT", "Hardware", "Web Dashboard", "Real-time"],
-    featured: false,
-    github: null,
+      "IoT-based automated switch system using ESP8266 microcontroller with custom circuit design. Features a Flutter mobile app with Firebase integration for remote control, real-time monitoring, and device management. Complete hardware-software solution for smart home automation.",
+    tags: ["ESP8266", "Flutter", "Firebase", "IoT", "Circuit Design", "Mobile App"],
+    featured: true,
+    github: "https://github.com/ali-haider524",
     live: null,
-    image: null,
-    wip: true,
+    image: "/projects/iot-switch.jpg",
   },
 ];
 
