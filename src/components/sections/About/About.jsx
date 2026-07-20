@@ -3,10 +3,10 @@ import { personalInfo } from '../../../data/portfolioData'
 import styles from './About.module.css'
 
 const services = [
-  { icon: '🌐', bg: '#eef2ff', title: 'Web Development',       desc: 'Custom websites and apps using PHP, Node.js, React, and WordPress.' },
+  { icon: '🌐', bg: '#eef2ff', title: 'Web Development',       desc: 'Custom websites and apps using PHP, Laravel, Node.js, React, and WordPress.' },
   { icon: '🤖', bg: '#f0fdf4', title: 'AI & Chatbots',         desc: 'AI chatbots and agents with Botpress, n8n, and API integrations.' },
   { icon: '⚙️', bg: '#fff7ed', title: 'Automation',            desc: 'Business workflow automation with n8n and custom API connections.' },
-  { icon: '🗄️', bg: '#fdf4ff', title: 'Backend & Databases',   desc: 'Solid backend systems with PHP, Node.js, and MySQL.' },
+  { icon: '📱', bg: '#fdf4ff', title: 'Mobile & IoT',          desc: 'Flutter mobile apps with Firebase and IoT solutions with ESP8266 microcontrollers.' },
 ]
 
 export default function About() {
@@ -85,18 +85,22 @@ export default function About() {
             <h3>✍️ About Me</h3>
             <p className={styles.para}>
               I'm Ali Haider — an AI Web Developer and Automation Specialist based in Pakistan.
-              I build custom web solutions, from business websites and management systems to
-              AI-powered chatbots and automation workflows.
+              I build custom web solutions, from business websites and CMS platforms to management 
+              systems, AI-powered chatbots, and workflow automations. I also develop mobile apps 
+              with Flutter and IoT automation systems.
             </p>
             <p className={styles.para}>
-              I've worked at WeConnect Software House building client websites and integrating
-              AI agents, and completed a remote Node.js internship at Nexium Software House.
+              I've worked at WeConnect Software House building client websites, Laravel CMS platforms,
+              and integrating AI agents. I completed a remote Node.js internship at Nexium Software House.
+              Recently, I delivered a production Laravel CMS for Quick Legal Corporation, launched 
+              SolveGrid (an online calculation tools platform), and completed an IoT automated switch 
+              system with ESP8266 and Flutter mobile app.
+            </p>
+            <p className={styles.para}>
               I graduated with a BS in Computer Science in 2026 and hold Google certifications
-              in Cybersecurity and AI Prompt Engineering.
-            </p>
-            <p className={styles.para}>
-              I care about clean code, practical solutions, and delivering on time. Whether it's
-              a PHP backend, a React frontend, or an n8n automation — I get it done.
+              in Cybersecurity and AI Prompt Engineering. I care about clean code, practical solutions, 
+              and delivering on time. Whether it's a PHP backend, Laravel CMS, React frontend, Flutter 
+              mobile app, or an IoT automation system — I get it done.
             </p>
           </div>
 

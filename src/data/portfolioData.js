@@ -7,9 +7,11 @@ export const personalInfo = {
   github: "https://github.com/ali-haider524",
   linkedin: "https://www.linkedin.com/in/ali-haider-524salar/",
   location: "Pakistan",
-  about: `I'm Ali Haider, an AI Web Developer, Automation Specialist & AI Solutions Builder with expertise in custom web development using PHP, Node.js, and React. I build interactive apps and management systems tailored for businesses.
+  about: `I'm Ali Haider, an AI Web Developer, Automation Specialist & AI Solutions Builder with expertise in custom web development using PHP, Laravel, Node.js, and React. I build interactive apps, CMS platforms, and management systems tailored for businesses.
 
-I have hands-on experience in backend development with PHP and MySQL, and I help businesses automate workflows using tools like Botpress, n8n, and API integrations. I deliver high-performance, scalable solutions — from clean UI/UX to robust backend systems.
+I have hands-on experience in backend development with PHP, Laravel, and MySQL, along with mobile app development using Flutter and Firebase. I help businesses automate workflows using tools like Botpress, n8n, and API integrations. I also work with IoT systems, building hardware-software solutions with ESP8266 and mobile control interfaces.
+
+I deliver high-performance, scalable solutions — from clean UI/UX to robust backend systems, mobile apps, and IoT automation.
 
 I graduated in 2026 with a BS in Computer Science and have worked at WeConnect Software House and completed a remote internship at Nexium Software House. I'm also certified in Google Cybersecurity and AI Prompt Engineering.`,
 };

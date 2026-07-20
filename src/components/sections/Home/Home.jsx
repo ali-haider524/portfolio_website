@@ -41,13 +41,14 @@ export default function Home({ setActiveSection }) {
           </h1>
           <p className={styles.heroTitle}>AI Web Developer &amp; Automation Specialist</p>
           <p className={styles.heroDesc}>
-            I build intelligent web solutions — custom websites, management systems,
-            AI chatbots, and automation workflows. From clean UI to solid backend,
-            I deliver results that work.
+            I build intelligent web solutions — custom websites, CMS platforms, management 
+            systems, AI chatbots, mobile apps, and IoT automation. From clean UI to solid 
+            backend with Laravel, Node.js, and React. From mobile apps with Flutter to 
+            hardware control with ESP8266. I deliver results that work.
           </p>
 
           <div className={styles.techRow}>
-            {['React', 'PHP', 'Node.js', 'AI Agents', 'MySQL', 'n8n', 'Botpress'].map((t) => (
+            {['React', 'Laravel', 'PHP', 'Node.js', 'Flutter', 'AI Agents', 'MySQL', 'Firebase', 'ESP8266', 'Botpress'].map((t) => (
               <span key={t} className={styles.pill}>{t}</span>
             ))}
           </div>
