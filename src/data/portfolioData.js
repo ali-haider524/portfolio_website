@@ -19,11 +19,11 @@ I graduated in 2026 with a BS in Computer Science and have worked at WeConnect S
 export const skills = [
   {
     category: "Frontend",
-    items: ["React.js", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Alpine.js"],
+    items: ["React.js", "Next.js", "HTML5", "CSS3", "JavaScript", "TypeScript", "Tailwind CSS", "Alpine.js"],
   },
   {
     category: "Backend",
-    items: ["PHP", "Laravel", "Node.js", "MySQL", "REST APIs", "WordPress"],
+    items: ["PHP", "Laravel", "Node.js", "NestJS", "MySQL", "MariaDB", "REST APIs", "WordPress"],
   },
   {
     category: "AI & Automation",
@@ -31,7 +31,7 @@ export const skills = [
   },
   {
     category: "Tools & Others",
-    items: ["Git & GitHub", "Vite", "Flutter", "Firebase", "Python (Tkinter)", "ESP8266", "IoT", "Cybersecurity (Basic)"],
+    items: ["Git & GitHub", "Vite", "Flutter", "Firebase", "Cloudflare R2", "Python (Tkinter)", "ESP8266", "IoT", "Cybersecurity (Basic)"],
   },
 ];
 
@@ -61,6 +61,18 @@ export const experience = [
 export const projects = [
   {
     id: 1,
+    title: "Ishtiaq Solar — Full-Stack E-Commerce Platform",
+    category: "E-Commerce",
+    description:
+      "Complete production e-commerce system with customer storefront, backend API, admin/backoffice, CMS controls, and email system. Features product catalog, search, wishlist, cart, checkout, order management, customer accounts, and CMS-controlled homepage. Deployed with separate storefront, API, and admin apps, cloud media storage, custom domain, and transactional emails.",
+    tags: ["Next.js", "NestJS", "TypeScript", "Node.js", "MariaDB", "Cloudflare R2", "Resend"],
+    featured: true,
+    github: "https://github.com/ali-haider524",
+    live: "https://ishtiaqsolar.store",
+    image: "/projects/ishtiaqsolar.jpg",
+  },
+  {
+    id: 2,
     title: "Quick Legal Corporation - CMS Website",
     category: "Business Website",
     description:
@@ -72,7 +84,7 @@ export const projects = [
     image: "/projects/quicklegal.jpg",
   },
   {
-    id: 2,
+    id: 3,
     title: "SolveGrid - Online Calculation Tools",
     category: "Web App",
     description:
@@ -84,7 +96,7 @@ export const projects = [
     image: "/projects/solvegrid.jpg",
   },
   {
-    id: 3,
+    id: 4,
     title: "Hospital / Clinic Management System",
     category: "Web App",
     description:
@@ -96,7 +108,7 @@ export const projects = [
     image: "/projects/hospitalmanagement.png",
   },
   {
-    id: 4,
+    id: 5,
     title: "Construction Company Website",
     category: "Business Website",
     description:
@@ -108,7 +120,7 @@ export const projects = [
     image: "/projects/construction.jpg",
   },
   {
-    id: 5,
+    id: 6,
     title: "Solar Company Website",
     category: "Business Website",
     description:
@@ -120,7 +132,7 @@ export const projects = [
     image: "/projects/solar.jpg",
   },
   {
-    id: 6,
+    id: 7,
     title: "Skincare E-Commerce Store",
     category: "E-Commerce",
     description:
@@ -132,7 +144,7 @@ export const projects = [
     image: "/projects/skincare.jpg",
   },
   {
-    id: 7,
+    id: 8,
     title: "Portfolio Website (HTML/CSS/JS)",
     category: "Portfolio",
     description:
@@ -144,7 +156,7 @@ export const projects = [
     image: "/projects/portfolio-html.jpg",
   },
   {
-    id: 8,
+    id: 9,
     title: "Portfolio Website (React + Vite)",
     category: "Portfolio",
     description:
@@ -156,7 +168,7 @@ export const projects = [
     image: "/projects/portfolio-react.jpg",
   },
   {
-    id: 9,
+    id: 10,
     title: "Quotes Generator Desktop App",
     category: "Desktop App",
     description:
@@ -168,7 +180,7 @@ export const projects = [
     image: "/projects/quotes-app.jpg",
   },
   {
-    id: 10,
+    id: 11,
     title: "Resume Tailor App",
     category: "Desktop App",
     description:
@@ -180,7 +192,7 @@ export const projects = [
     image: "/projects/resume-tailor.jpg",
   },
   {
-    id: 11,
+    id: 12,
     title: "Developer Calculator (Python)",
     category: "Desktop App",
     description:
@@ -192,7 +204,7 @@ export const projects = [
     image: "/projects/calculator.jpg",
   },
   {
-    id: 12,
+    id: 13,
     title: "AI Portfolio Chatbot",
     category: "AI Chatbot",
     description:
@@ -204,7 +216,7 @@ export const projects = [
     image: "/projects/chatbot.jpg",
   },
   {
-    id: 13,
+    id: 14,
     title: "IoT Automated Switch System",
     category: "IoT",
     description:

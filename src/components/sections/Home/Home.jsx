@@ -48,7 +48,7 @@ export default function Home({ setActiveSection }) {
           </p>
 
           <div className={styles.techRow}>
-            {['React', 'Laravel', 'PHP', 'Node.js', 'Flutter', 'AI Agents', 'MySQL', 'Firebase', 'ESP8266', 'Botpress'].map((t) => (
+            {['React', 'Next.js', 'Laravel', 'NestJS', 'TypeScript', 'Node.js', 'Flutter', 'AI Agents', 'MariaDB', 'Firebase'].map((t) => (
               <span key={t} className={styles.pill}>{t}</span>
             ))}
           </div>
@@ -70,7 +70,7 @@ export default function Home({ setActiveSection }) {
       {/* ── Stats ── */}
       <div className={styles.statsRow}>
         {[
-          { num: '13+', label: 'Projects Built' },
+          { num: '14+', label: 'Projects Built' },
           { num: '2',   label: 'Companies' },
           { num: '2',   label: 'Certifications' },
           { num: '2026', label: 'CS Graduate' },
